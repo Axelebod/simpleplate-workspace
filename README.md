@@ -2,6 +2,10 @@
 
 CRM et Mission Control pour la prospection de sites web pour petites entreprises.
 
+## 📘 Guide d'utilisation
+
+**👉 [Guide GitHub pour les agents](GUIDE_GITHUB.md)**
+
 ## 📊 Données partagées
 
 Ce repo contient les données de l'équipe SimplePlate :
