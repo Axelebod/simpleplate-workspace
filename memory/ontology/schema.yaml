@@ -1,0 +1,111 @@
+types:
+  # Agents & People
+  Person:
+    required: [name]
+    properties:
+      email: string
+      phone: string
+      notes: string
+      role: string
+
+  Organization:
+    required: [name]
+    properties:
+      type: string
+      website: string
+      notes: string
+
+  # Work - SimplePlate specific
+  Project:
+    required: [name, status]
+    properties:
+      description: string
+      budget: number
+      start_date: string
+      deadline: string
+      tech_stack: array
+    status_enum: [lead, quoted, accepted, in_progress, review, delivered, archived]
+
+  Task:
+    required: [title, status]
+    properties:
+      description: string
+      due: string
+      priority: string
+      estimated_hours: number
+    status_enum: [backlog, todo, in_progress, blocked, review, done]
+    priority_enum: [low, medium, high, urgent]
+
+  Deliverable:
+    required: [name, type]
+    properties:
+      description: string
+      url: string
+      completed_date: string
+    type_enum: [wireframe, mockup, prototype, website, feature, bugfix, documentation]
+
+  # Time & Place
+  Event:
+    required: [title, start]
+    properties:
+      end: string
+      location: string
+      description: string
+    validate: "end >= start if end exists"
+
+  # Information
+  Note:
+    required: [content]
+    properties:
+      tags: array
+      refs: array
+
+  # Resources
+  Account:
+    required: [service, username]
+    properties:
+      credential_ref: string
+      notes: string
+
+relations:
+  has_owner:
+    from_types: [Project, Task]
+    to_types: [Person]
+    cardinality: many_to_one
+
+  has_client:
+    from_types: [Project]
+    to_types: [Organization, Person]
+    cardinality: many_to_one
+
+  has_task:
+    from_types: [Project]
+    to_types: [Task]
+    cardinality: one_to_many
+
+  has_deliverable:
+    from_types: [Project, Task]
+    to_types: [Deliverable]
+    cardinality: one_to_many
+
+  blocks:
+    from_types: [Task]
+    to_types: [Task]
+    cardinality: many_to_many
+    acyclic: true
+
+  depends_on:
+    from_types: [Task]
+    to_types: [Task]
+    cardinality: many_to_many
+    acyclic: true
+
+  member_of:
+    from_types: [Person]
+    to_types: [Organization]
+    cardinality: many_to_many
+
+  works_on:
+    from_types: [Person]
+    to_types: [Project]
+    cardinality: many_to_many

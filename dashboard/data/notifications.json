@@ -1,0 +1,26 @@
+{
+  "notifications": [
+    {
+      "id": "notif-1773847798232-zm20zt3k6",
+      "from": "hunter",
+      "to": "jarbite",
+      "type": "check_complete",
+      "message": "Vérification emails effectuée - Aucune réponse reçue",
+      "data": {},
+      "timestamp": "2026-03-18T15:29:58.232Z",
+      "read": false
+    },
+    {
+      "id": "notif-1773844205949-bcmk9kraz",
+      "from": "hunter",
+      "to": "jarbite",
+      "type": "check_complete",
+      "message": "Vérification emails effectuée - Aucune réponse reçue",
+      "data": {},
+      "timestamp": "2026-03-18T14:30:05.949Z",
+      "read": false
+    }
+  ],
+  "unreadCount": 2,
+  "lastUpdate": "2026-03-18T15:29:58.232Z"
+}

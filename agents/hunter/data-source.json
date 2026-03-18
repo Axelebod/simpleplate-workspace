@@ -1,0 +1,6 @@
+{
+  "dataPath": "/root/.openclaw/workspace/dashboard/data",
+  "scrapy": "/root/.openclaw/workspace/dashboard/data/scrapy/leads.json",
+  "hunter": "/root/.openclaw/workspace/dashboard/data/hunter/outreach.json",
+  "jarbite": "/root/.openclaw/workspace/dashboard/data/jarbite/activity.json"
+}

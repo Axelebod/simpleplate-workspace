@@ -1,0 +1,11 @@
+{
+  "name": "wilson",
+  "displayName": "Wilson 🏗️",
+  "role": "builder",
+  "description": "Expert en création de sites vitrines HTML/CSS/JS",
+  "skills": ["html-coder", "html-designer", "image", "seo-optimizer"],
+  "triggers": ["@wilson", "site web", "vitrine", "créer un site", "builder"],
+  "autoStart": false,
+  "model": "ollama/kimi-k2.5:cloud",
+  "thinking": "low"
+}

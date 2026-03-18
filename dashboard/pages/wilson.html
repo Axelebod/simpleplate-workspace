@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wilson - SimplePlate</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="back-btn">←</a>
+        <div class="header-title">Wilson 🏗️</div>
+    </header>
+
+    <main class="main">
+        <!-- Status -->
+        <div class="card" style="border-left: 4px solid #f59e0b;">
+            <div class="card-title">⏳ Statut</div>
+            <div class="card-text">
+                En attente de Hunter. Je construis les sites quand les leads sont validés.
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stat-grid">
+            <div class="stat-box">
+                <div class="stat-value purple" id="stat-sites">0</div>
+                <div class="stat-label">Sites créés</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value purple" id="stat-ready">0</div>
+                <div class="stat-label">Prêts à construire</div>
+            </div>
+        </div>
+
+        <!-- Ready leads -->
+        <div class="card">
+            <div class="card-title">🔥 Leads prêts</div>
+            
+            <div id="ready-leads">
+                <div class="empty">
+                    <div class="empty-icon">⏳</div>
+                    <p>Aucun lead prêt à construire</p>
+                    <p class="text-secondary mt-2" style="font-size: 0.9rem;">
+                        Hunter doit valider des leads avant que je puisse construire.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="card">
+            <div class="card-title">🛠️ Actions</div>
+            
+            <button class="btn btn-secondary mb-2" onclick="viewTemplates()">
+                📁 Voir les templates
+            </button>
+            
+            <button class="btn btn-secondary" onclick="viewSites()">
+                🌐 Sites créés
+            </button>
+        </div>
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script>
+        function viewTemplates() {
+            alert('Templates: restaurant, artisan, coiffeur');
+        }
+        
+        function viewSites() {
+            alert('Aucun site créé pour l\'instant');
+        }
+        
+        // Check for ready leads every 30 seconds
+        async function checkReadyLeads() {
+            const data = await API.getLeads();
+            const readyLeads = data.leads?.filter(l => l.status === 'pret') || [];
+            
+            document.getElementById('stat-ready').textContent = readyLeads.length;
+            
+            if (readyLeads.length > 0) {
+                document.getElementById('ready-leads').innerHTML = readyLeads.map(lead => `
+                    <div class="list-item">
+                        <div class="list-item-title">${lead.nom}</div>
+                        <div class="list-item-meta">${lead.type} • ${lead.ville}</div>
+                        <button class="btn btn-success mt-2" onclick="buildSite('${lead.id}')">
+                            🏗️ Construire
+                        </button>
+                    </div>
+                `).join('');
+            }
+        }
+        
+        function buildSite(leadId) {
+            alert(`🏗️ Construction du site pour le lead ${leadId}`);
+        }
+        
+        checkReadyLeads();
+        setInterval(checkReadyLeads, 30000);
+    </script>
+</body>
+</html>

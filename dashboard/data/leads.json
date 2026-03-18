@@ -1,0 +1,24 @@
+{
+  "leads": [
+    {
+      "id": "1",
+      "nom": "Exemple Restaurant",
+      "type": "Restaurant",
+      "ville": "Paris",
+      "email": "contact@exemple.fr",
+      "telephone": "01 23 45 67 89",
+      "note": 4.5,
+      "avis": 128,
+      "qualite": "high",
+      "status": "nouveau",
+      "date": "2026-03-18T14:00:00Z"
+    }
+  ],
+  "total": 1,
+  "byStatus": {
+    "nouveau": 1,
+    "contacte": 0,
+    "pret": 0,
+    "converti": 0
+  }
+}

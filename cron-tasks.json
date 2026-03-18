@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {
+      "id": "scrapy-morning-search",
+      "agent": "scrapy",
+      "schedule": "0 9 * * *",
+      "description": "Recherche matinale de restaurants sans site",
+      "enabled": true
+    },
+    {
+      "id": "scrapy-evening-search", 
+      "agent": "scrapy",
+      "schedule": "0 18 * * *",
+      "description": "Recherche soir de nouveaux leads",
+      "enabled": true
+    },
+    {
+      "id": "hunter-daily-messages",
+      "agent": "hunter",
+      "schedule": "0 10 * * *",
+      "description": "Génération des messages pour les leads HIGH",
+      "enabled": true
+    },
+    {
+      "id": "jarbite-daily-report",
+      "agent": "jarbite",
+      "schedule": "0 20 * * *",
+      "description": "Rapport quotidien des activités",
+      "enabled": true
+    }
+  ]
+}

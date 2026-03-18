@@ -1,0 +1,71 @@
+{
+  "version": "1.0",
+  "agents": {
+    "scrapy": {
+      "enabled": true,
+      "schedule": "0 9 * * *",
+      "auto_mode": true,
+      "rules": {
+        "min_leads_threshold": 50,
+        "fetch_batch_size": 20,
+        "qualify_high": true,
+        "auto_save": true
+      },
+      "notifications": {
+        "on_success": true,
+        "on_error": true,
+        "slack_webhook": null
+      }
+    },
+    "hunter": {
+      "enabled": true,
+      "schedule": "0 */2 * * *",
+      "auto_mode": true,
+      "rules": {
+        "max_messages_per_day": 50,
+        "prioritize_high": true,
+        "auto_send": false,
+        "draft_only": true
+      },
+      "notifications": {
+        "on_draft_ready": true,
+        "on_error": true
+      }
+    },
+    "wilson": {
+      "enabled": true,
+      "webhook_mode": true,
+      "auto_mode": true,
+      "rules": {
+        "auto_build": true,
+        "auto_deploy": false,
+        "template_selection": "auto",
+        "max_sites_per_day": 10
+      },
+      "notifications": {
+        "on_build_complete": true,
+        "on_deploy": true
+      }
+    },
+    "jarbite": {
+      "enabled": true,
+      "schedule": "0 18 * * *",
+      "auto_mode": true,
+      "rules": {
+        "daily_report": true,
+        "auto_rebalance": true,
+        "alert_thresholds": {
+          "messages_backlog": 10,
+          "leads_minimum": 20,
+          "sites_pending": 3
+        }
+      }
+    }
+  },
+  "global": {
+    "mode": "autonomous",
+    "human_approval_required": false,
+    "log_level": "info",
+    "data_retention_days": 90
+  }
+}

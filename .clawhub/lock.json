@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "skills": {
+    "ontology": {
+      "version": "1.0.4",
+      "installedAt": 1773755403302
+    },
+    "self-improving": {
+      "version": "1.2.16",
+      "installedAt": 1773755581815
+    },
+    "proactivity": {
+      "version": "1.0.1",
+      "installedAt": 1773755832499
+    },
+    "agent-swarm": {
+      "version": "1.7.19",
+      "installedAt": 1773759670486
+    },
+    "ddg-web-search": {
+      "version": "1.0.0",
+      "installedAt": 1773760381710
+    },
+    "agent-browser-clawdbot": {
+      "version": "0.1.0",
+      "installedAt": 1773760393244
+    },
+    "copywriting": {
+      "version": "0.1.0",
+      "installedAt": 1773760441435
+    },
+    "youtube-watcher": {
+      "version": "1.0.0",
+      "installedAt": 1773760644420
+    },
+    "skill-finder": {
+      "version": "1.1.5",
+      "installedAt": 1773766801850
+    },
+    "csv": {
+      "version": "1.0.0",
+      "installedAt": 1773767052263
+    },
+    "json": {
+      "version": "1.0.0",
+      "installedAt": 1773767101255
+    },
+    "filesystem-access": {
+      "version": "1.0.0",
+      "installedAt": 1773767115068
+    },
+    "porteden-email": {
+      "version": "1.0.4",
+      "installedAt": 1773767281812
+    },
+    "mini-crm": {
+      "version": "1.1.0",
+      "installedAt": 1773767415738
+    },
+    "lead-storage": {
+      "version": "1.0.6",
+      "installedAt": 1773767522223
+    },
+    "html-coder": {
+      "version": "2.0.1",
+      "installedAt": 1773782205849
+    },
+    "html-designer": {
+      "version": "1.0.0",
+      "installedAt": 1773782205927
+    },
+    "website-seo": {
+      "version": "1.0.0",
+      "installedAt": 1773784621926
+    },
+    "seo-optimizer": {
+      "version": "0.1.0",
+      "installedAt": 1773784622307
+    },
+    "screenshot": {
+      "version": "1.0.1",
+      "installedAt": 1773821101238
+    },
+    "ai-persona-os": {
+      "version": "1.6.2",
+      "installedAt": 1773821104757
+    },
+    "image": {
+      "version": "1.0.4",
+      "installedAt": 1773821160935
+    },
+    "facebook": {
+      "version": "1.0.1",
+      "installedAt": 1773821803009
+    },
+    "catbox-upload": {
+      "version": "1.0.0",
+      "installedAt": 1773823714660
+    },
+    "animations": {
+      "version": "1.0.0",
+      "installedAt": 1773833609026
+    },
+    "vercel-deploy": {
+      "version": "1.0.0",
+      "installedAt": 1773833609120
+    },
+    "demo-video": {
+      "version": "1.0.0",
+      "installedAt": 1773833609305
+    },
+    "best-image-generation": {
+      "version": "1.0.2",
+      "installedAt": 1773833641733
+    },
+    "copywriting-pro": {
+      "version": "1.0.0",
+      "installedAt": 1773834802848
+    },
+    "email-marketing": {
+      "version": "1.0.0",
+      "installedAt": 1773834803066
+    },
+    "crm-manager": {
+      "version": "1.0.0",
+      "installedAt": 1773834803100
+    },
+    "lead-scorer": {
+      "version": "1.0.0",
+      "installedAt": 1773834809142
+    },
+    "sales": {
+      "version": "1.0.0",
+      "installedAt": 1773834809247
+    },
+    "sales-pipeline-tracker": {
+      "version": "1.0.0",
+      "installedAt": 1773834809277
+    }
+  }
+}

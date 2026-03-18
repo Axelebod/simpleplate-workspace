@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hunter - SimplePlate</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="back-btn">←</a>
+        <div class="header-title">Hunter 🎯</div>
+    </header>
+
+    <main class="main">
+        <!-- Stats -->
+        <div class="stat-grid">
+            <div class="stat-box">
+                <div class="stat-value green" id="stat-total">—</div>
+                <div class="stat-label">À contacter</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value green" id="stat-sent">0</div>
+                <div class="stat-label">Envoyés</div>
+            </div>
+        </div>
+
+        <!-- Action -->
+        <div class="card">
+            <div class="card-title">✨ Générer des messages</div>
+            
+            <div class="card-text mt-2 mb-4">
+                Créer des messages personnalisés pour les leads HIGH.
+            </div>
+            
+            <button class="btn btn-success" onclick="generateMessages()">
+                ✉️ Générer les messages
+            </button>
+        </div>
+
+        <!-- Priority leads -->
+        <div class="card">
+            <div class="card-title">🔥 Leads prioritaires</div>
+            
+            <div id="priority-list">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Chargement...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script>
+        async function loadPriorityLeads() {
+            const data = await API.getLeads();
+            const highLeads = data.leads?.filter(l => l.qualite === 'high') || [];
+            
+            document.getElementById('stat-total').textContent = highLeads.length;
+            
+            const container = document.getElementById('priority-list');
+            
+            if (highLeads.length === 0) {
+                container.innerHTML = `
+                    <div class="empty">
+                        <div class="empty-icon">🎯</div>
+                        <p>Aucun lead prioritaire</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = highLeads.slice(0, 5).map(lead => `
+                <div class="list-item">
+                    <div class="list-item-title">${lead.nom}</div>
+                    <div class="list-item-meta">${lead.type} • ${lead.ville}</div>
+                    
+                    <button class="btn btn-success mt-2" onclick="generateForLead('${lead.id}')">
+                        ✉️ Message
+                    </button>
+                </div>
+            `).join('');
+        }
+        
+        function generateMessages() {
+            alert('✨ Messages générés pour tous les leads HIGH');
+        }
+        
+        function generateForLead(leadId) {
+            alert(`✉️ Message généré pour le lead ${leadId}`);
+        }
+        
+        loadPriorityLeads();
+    </script>
+</body>
+</html>

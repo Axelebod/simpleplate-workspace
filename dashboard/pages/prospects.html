@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Prospects - SimplePlate</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="back-btn">←</a>
+        <div class="header-title">Prospects</div>
+    </header>
+
+    <main class="main">
+        <div id="leads-list">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Chargement des prospects...</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script>
+        async function loadProspects() {
+            const data = await API.getLeads();
+            const container = document.getElementById('leads-list');
+            
+            if (!data.leads || data.leads.length === 0) {
+                container.innerHTML = `
+                    <div class="empty">
+                        <div class="empty-icon">🔍</div>
+                        <p>Aucun prospect trouvé</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = data.leads.map(lead => `
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+                        <div class="card-title">${lead.nom}</div>
+                        <span style="background: ${lead.qualite === 'high' ? '#10b981' : '#8b92b4'}; color: white; padding: 4px 8px; border-radius: 12px; font-size: 0.75rem;">
+                            ${lead.qualite.toUpperCase()}
+                        </span>
+                    </div>
+                    
+                    <div class="card-text mb-2">
+                        ${lead.type} • ${lead.ville}
+                    </div>
+                    
+                    <div class="card-text" style="font-size: 0.85rem;">
+                        ⭐ ${lead.note} (${lead.avis} avis)
+                    </div>
+                    
+                    ${lead.email ? `<div class="mt-2" style="font-size: 0.85rem;">📧 ${lead.email}</div>` : ''}
+                    
+                    ${lead.telephone ? `<div style="font-size: 0.85rem;">📞 ${lead.telephone}</div>` : ''}
+                </div>
+            `).join('');
+        }
+        
+        loadProspects();
+    </script>
+</body>
+</html>

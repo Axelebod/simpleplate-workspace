@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chez Nous - Restaurant à Cogolin. Cuisine française et méditerranéenne. 4.9★ sur 2183 avis.">
+    <meta property="og:title" content="Chez Nous - Restaurant Cogolin">
+    <meta property="og:description" content="Restaurant français et méditerranéen au vieux village de Cogolin">
+    <title>Chez Nous - Restaurant | Cogolin</title>
+    <style>
+        :root {
+            --bg: #fafafa;
+            --bg-card: #ffffff;
+            --text: #1a1a1a;
+            --text-muted: #6b7280;
+            --border: #e5e7eb;
+            --accent: #c41e3a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        header { padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; }
+        .hero { padding: 5rem 0; text-align: center; background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%); }
+        .hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+        .hero .tagline { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+        .hero .rating { color: #f59e0b; font-size: 1.1rem; margin-top: 1rem; }
+        .hero .location { color: var(--accent); font-weight: 500; margin-top: 0.5rem; }
+        .cta-btn { display: inline-block; margin-top: 2rem; padding: 1rem 2rem; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-weight: 500; }
+        section { padding: 4rem 0; }
+        section:nth-child(even) { background: white; }
+        h2 { font-size: 1.8rem; text-align: center; margin-bottom: 2rem; }
+        .section-intro { text-align: center; max-width: 600px; margin: 0 auto 3rem; color: var(--text-muted); }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .info-card { padding: 2rem; border: 1px solid var(--border); border-radius: 12px; }
+        .info-card h3 { margin-bottom: 1rem; color: var(--accent); }
+        .info-card p { color: var(--text-muted); line-height: 1.7; }
+        .hours-list { list-style: none; margin-top: 1rem; }
+        .hours-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+        .contact-section { text-align: center; background: var(--text); color: white; }
+        .contact-section h2 { color: white; }
+        .contact-info { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 2rem; }
+        .contact-item a { color: white; text-decoration: none; border-bottom: 1px solid transparent; }
+        .contact-item a:hover { border-bottom-color: white; }
+        footer { padding: 2rem 0; text-align: center; color: var(--text-muted); font-size: 0.875rem; border-top: 1px solid var(--border); }
+        .placeholder-notice { background: #fef3c7; border: 1px solid #f59e0b; padding: 1rem; border-radius: 8px; margin: 2rem auto; max-width: 600px; text-align: center; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+            .contact-info { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">Chez Nous</a>
+                <ul class="nav-links">
+                    <li><a href="#infos">Informations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Chez Nous</h1>
+            <p class="tagline">Restaurant français et méditerranéen</p>
+            <p class="rating">⭐ 4.9/5 (2183 avis)</p>
+            <p class="location">📍 9 Rue nationale, Vieux village — 83310 Cogolin</p>
+            <a href="tel:0494546702" class="cta-btn">Appeler pour réserver</a>
+        </div>
+    </section>
+
+    <section id="infos">
+        <div class="container">
+            <h2>Informations</h2>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📍 Adresse</h3>
+                    <p>9 Rue nationale<br>Vieux village<br>83310 Cogolin</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>📞 Contact</h3>
+                    <p>Téléphone : 04 94 54 67 02<br><br>
+                    <a href="https://www.facebook.com/100028831856822/" style="color: var(--accent);">Voir sur Facebook</a></p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>⭐ Avis clients</h3>
+                    <p>Note moyenne : 4.9/5<br>Basé sur 2183 avis<br><br>
+                    <em>"Une institution à Cogolin"</em></p>
+                </div>
+            </div>
+            
+            <div class="placeholder-notice">
+                <strong>⚠️ Informations à compléter</strong><br>
+                Horaires d'ouverture, menu, photos et description détaillée à ajouter après contact avec le restaurant.
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    📞 <a href="tel:0494546702">04 94 54 67 02</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Chez Nous — Cogolin</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem;">Site en construction — Informations provisoires</p>
+        </div>
+    </footer>
+</body>
+</html>

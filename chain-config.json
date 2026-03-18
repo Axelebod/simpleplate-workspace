@@ -1,0 +1,36 @@
+{
+  "chain": {
+    "enabled": true,
+    "schedule": "0 9,14,18 * * *",
+    "modes": {
+      "morning": "full",
+      "afternoon": "hunter-only",
+      "evening": "wilson-only"
+    }
+  },
+  "agents": {
+    "scrapy": {
+      "autoStart": false,
+      "searchParams": {
+        "location": "Var",
+        "types": ["restaurant", "artisan", "commerce"],
+        "minQuality": "medium"
+      }
+    },
+    "hunter": {
+      "autoStart": false,
+      "templates": ["amical", "professionnel", "urgent"],
+      "maxMessagesPerRun": 10
+    },
+    "wilson": {
+      "autoStart": false,
+      "templates": ["modern", "classic", "bold"],
+      "deployTarget": "netlify"
+    }
+  },
+  "notifications": {
+    "telegram": true,
+    "onSuccess": true,
+    "onError": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "SimplePlate Agent Router",
+  "version": "1.0.0",
+  "description": "Route messages to Scrapy, Hunter, or Jarbite based on mentions",
+  
+  "agents": {
+    "scrapy": {
+      "id": "scrapy",
+      "trigger": "@scrapy",
+      "description": "Prospection PME - trouve des entreprises sans site web",
+      "emoji": "🐶",
+      "workspace": "/root/.openclaw/workspace/agents/scrapy"
+    },
+    "hunter": {
+      "id": "hunter", 
+      "trigger": "@hunter",
+      "description": "Rédaction messages - écrit les messages de prospection",
+      "emoji": "🎯",
+      "workspace": "/root/.openclaw/workspace/agents/hunter"
+    },
+    "jarbite": {
+      "id": "main",
+      "trigger": "@jarbite",
+      "description": "Assistant principal SimplePlate",
+      "emoji": "🍽️",
+      "workspace": "/root/.openclaw/workspace"
+    }
+  },
+  
+  "routing_rules": {
+    "default": "jarbite",
+    "group_id": "5269482932",
+    "channel": "telegram"
+  },
+  
+  "delegation": {
+    "method": "sessions_spawn",
+    "runtime": "acp",
+    "mode": "session",
+    "thread": true
+  }
+}

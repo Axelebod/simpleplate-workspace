@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimplePlate Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-icon">🍽️</span>
+                <span class="logo-text">SimplePlate</span>
+            </div>
+            
+            <nav class="nav">
+                <a href="#overview" class="nav-item active" data-page="overview">
+                    <i class="fas fa-home"></i>
+                    <span>Vue d'ensemble</span>
+                </a>
+                <a href="#scrapy" class="nav-item" data-page="scrapy">
+                    <span class="nav-icon">🕷️</span>
+                    <span>Scrapy</span>
+                </a>
+                <a href="#hunter" class="nav-item" data-page="hunter">
+                    <span class="nav-icon">🎯</span>
+                    <span>Hunter</span>
+                </a>
+                <a href="#jarbite" class="nav-item" data-page="jarbite">
+                    <span class="nav-icon">🍽️</span>
+                    <span>Jarbite</span>
+                </a>
+                <a href="#needs" class="nav-item" data-page="needs">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>Besoins</span>
+                </a>
+                <a href="#improvements" class="nav-item" data-page="improvements">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Améliorations</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="status-indicator">
+                    <span class="status-dot online"></span>
+                    <span>En ligne</span>
+                </div>
+                <p class="last-update">Maj: <span id="last-update">--</span></p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Header -->
+            <header class="header">
+                <h1 class="page-title">Dashboard</h1>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" onclick="refreshData()">
+                        <i class="fas fa-sync-alt"></i>
+                        Actualiser
+                    </button>
+                    <a href="https://github.com/axelbod/simpleplate-dashboard" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content">
+                <!-- Overview Page -->
+                <div id="page-overview" class="page active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon scrapy">🕷️</div>
+                            <div class="stat-info">
+                                <h3>Prospects Trouvés</h3>
+                                <p class="stat-value" id="stat-prospects">0</p>
+                                <span class="stat-change positive">Cette semaine</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon hunter">🎯</div>
+                            <div class="stat-info">
+                                <h3>Mails Envoyés</h3>
+                                <p class="stat-value" id="stat-mails">0</p>
+                                <span class="stat-change">Aujourd'hui</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon success">✅</div>
+                            <div class="stat-info">
+                                <h3>Taux de Réponse</h3>
+                                <p class="stat-value" id="stat-response">0%</p>
+                                <span class="stat-change">En moyenne</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon money">💰</div>
+                            <div class="stat-info">
+                                <h3>En Négociation</h3>
+                                <p class="stat-value" id="stat-negotiation">0</p>
+                                <span class="stat-change positive">Prospects chauds</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="card team-status">
+                            <h2><i class="fas fa-users"></i> Status de l'Équipe</h2>
+                            <div class="team-list">
+                                <div class="team-member">
+                                    <span class="member-avatar">🍽️</span>
+                                    <div class="member-info">
+                                        <h4>Jarbite</h4>
+                                        <p>Chef d'équipe</p>
+                                    </div>
+                                    <span class="badge active">Actif</span>
+                                </div>
+                                <div class="team-member">
+                                    <span class="member-avatar">🕷️</span>
+                                    <div class="member-info">
+                                        <h4>Scrapy</h4>
+                                        <p>Prospection web</p>
+                                    </div>
+                                    <span class="badge active">Actif</span>
+                                </div>
+                                <div class="team-member">
+                                    <span class="member-avatar">🎯</span>
+                                    <div class="member-info">
+                                        <h4>Hunter</h4>
+                                        <p>Outreach & Copy</p>
+                                    </div>
+                                    <span class="badge active">Actif</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card alerts">
+                            <h2><i class="fas fa-bell"></i> Alertes & Priorités</h2>
+                            <div class="alert-list" id="alert-list">
+                                <div class="alert-item urgent">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <div class="alert-content">
+                                        <p>Aucune alerte urgente</p>
+                                        <span>Tout va bien !</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card recent-activity">
+                        <h2><i class="fas fa-clock"></i> Activité Récente</h2>
+                        <div class="activity-list" id="activity-list">
+                            <p class="empty-state">En attente de données...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scrapy Page -->
+                <div id="page-scrapy" class="page">
+                    <div class="page-header">
+                        <h2><span class="page-icon">🕷️</span> Prospects Scrapy</h2>
+                        <button class="btn btn-primary" onclick="addProspect()">
+                            <i class="fas fa-plus"></i>
+                            Ajouter un prospect
+                        </button>
+                    </div>
+                    <div class="card">
+                        <div class="table-responsive">
+                            <table class="data-table" id="prospects-table">
+                                <thead>
+                                    <tr>
+                                        <th>Prospect</th>
+                                        <th>Source</th>
+                                        <th>Date</th>
+                                        <th>Besoin</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="empty-row">
+                                        <td colspan="6" class="text-center">Aucun prospect pour l'instant</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hunter Page -->
+                <div id="page-hunter" class="page">
+                    <div class="page-header">
+                        <h2><span class="page-icon">🎯</span> Outreach Hunter</h2>
+                        <button class="btn btn-primary" onclick="addOutreach()">
+                            <i class="fas fa-plus"></i>
+                            Nouveau mail
+                        </button>
+                    </div>
+                    <div class="card">
+                        <div class="table-responsive">
+                            <table class="data-table" id="outreach-table">
+                                <thead>
+                                    <tr>
+                                        <th>Prospect</th>
+                                        <th>Contact</th>
+                                        <th>Date Envoi</th>
+                                        <th>Réponse</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="empty-row">
+                                        <td colspan="6" class="text-center">Aucun mail envoyé pour l'instant</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jarbite Page -->
+                <div id="page-jarbite" class="page">
+                    <div class="page-header">
+                        <h2><span class="page-icon">🍽️</span> Coordination</h2>
+                    </div>
+                    <div class="card">
+                        <h3>Objectifs de la Semaine</h3>
+                        <div class="objectives-list" id="objectives-list">
+                            <div class="objective-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Création du dashboard équipe</span>
+                            </div>
+                            <div class="objective-item pending">
+                                <i class="far fa-circle"></i>
+                                <span>Scrapy: Trouver 20 prospects qualifiés</span>
+                            </div>
+                            <div class="objective-item pending">
+                                <i class="far fa-circle"></i>
+                                <span>Hunter: Contacter 15 prospects</span>
+                            </div>
+                            <div class="objective-item pending">
+                                <i class="far fa-circle"></i>
+                                <span>Convertir 1 prospect en client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Needs Page -->
+                <div id="page-needs" class="page">
+                    <div class="page-header">
+                        <h2><i class="fas fa-hand-holding-heart"></i> Besoins & Ressources</h2>
+                    </div>
+                    <div class="needs-grid" id="needs-list">
+                        <div class="card need-card blocking">
+                            <div class="need-header">
+                                <span class="need-priority urgent">🔴 Bloquant</span>
+                                <span class="need-date">2026-03-17</span>
+                            </div>
+                            <h3>Exemple: Accès LinkedIn Sales Navigator</h3>
+                            <p>Demandé par: Scrapy</p>
+                            <p class="need-reason">Pour trouver plus de prospects qualifiés</p>
+                            <div class="need-status">
+                                <span class="badge pending">☐ En attente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Improvements Page -->
+                <div id="page-improvements" class="page">
+                    <div class="page-header">
+                        <h2><i class="fas fa-lightbulb"></i> Propositions d'Amélioration</h2>
+                    </div>
+                    <div class="improvements-list" id="improvements-list">
+                        <div class="card improvement-card">
+                            <div class="improvement-header">
+                                <span class="improvement-author">🍽️ Jarbite</span>
+                                <span class="improvement-date">2026-03-17</span>
+                            </div>
+                            <h3>Création de ce dashboard</h3>
+                            <p>Centraliser la visibilité de l'équipe</p>
+                            <div class="improvement-meta">
+                                <span class="badge success">✅ Implémentée</span>
+                                <span class="impact">Impact: Meilleure coordination</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

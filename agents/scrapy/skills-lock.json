@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "computedHash": "dab1be21fd2e157b571d8e414dfe1ad356fcbdbb2f6193b956167f997ee16b8d"
+    },
+    "browser-use": {
+      "source": "browser-use/browser-use",
+      "sourceType": "github",
+      "computedHash": "409117e97ea4689e138a2080bfa94893e31ea216fbd0220d834dbdb791ecbe0e"
+    },
+    "contact-hunter": {
+      "source": "onewave-ai/claude-skills",
+      "sourceType": "github",
+      "computedHash": "ef48a6705a345ff1ba068179bf9f2527c44afa79b211f4fc39f94d741af81ea9"
+    },
+    "email-finder": {
+      "source": "shipshitdev/library",
+      "sourceType": "github",
+      "computedHash": "b3e99640813ea7c14c8d1f3c28cb3b0fce995afda0ca6255d4feac2219fca543"
+    },
+    "firecrawl-scrape": {
+      "source": "firecrawl/cli",
+      "sourceType": "github",
+      "computedHash": "59998e77e58ea0830c4ba5921cac65b1c2929847cf386b4060e19f5dcd0957f3"
+    },
+    "hunter": {
+      "source": "refly-ai/refly-skills",
+      "sourceType": "github",
+      "computedHash": "06afb01dedc3392af852de75e102cd29711dc4d4ca9d7151dd6ad3cad278608f"
+    },
+    "playwright-explore-website": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "computedHash": "ac361696198c2db22a0f9d3aa456d2f83c9f0110bf00d6ca529f735395fe3a5c"
+    },
+    "tavily-search": {
+      "source": "tavily-ai/skills",
+      "sourceType": "github",
+      "computedHash": "bda6e90a41addbe0f8750a38aebdf59c5bdc8514d23aaf2015ffe45de6958b74"
+    },
+    "web-search": {
+      "source": "brave/brave-search-skills",
+      "sourceType": "github",
+      "computedHash": "3bd3c40e767bbba3cfc4fd466dbe22aab5d0cb8476633d472655e20fa560ba92"
+    }
+  }
+}
