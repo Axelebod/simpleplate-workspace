@@ -1,0 +1,61 @@
+ID,Nom,Type,Ville,Téléphone,Email,Site Web,Qualité,Statut
+1,Cantine Bambou,Restaurant thaï,Cogolin,04 94 56 40 39,,Non,HIGH,nouveau
+2,Grain de Sel,Restaurant français,Cogolin,04 94 54 46 86,,Non,HIGH,nouveau
+3,Au Petit Bonheur,Restaurant français,Cogolin,04 94 49 68 39,,Non,HIGH,nouveau
+4,Coté Jardin,Bistrot,Cogolin,04 94 54 10 36,,Non,HIGH,nouveau
+5,VIA MARINE,Restaurant,Cogolin,09 66 97 23 83,farid.calvi@hotmail.fr,Non,HIGH,nouveau
+6,Chez Nous,Restaurant,Cogolin,04 94 54 67 02,bistrotcheznous@outlook.fr,Non,HIGH,nouveau
+7,LE M,Restaurant,Cogolin,04 94 49 33 95,didierjp83@gmail.com,Non,HIGH,nouveau
+8,P'okey,Restaurant végétarien,Cogolin,,,Non,HIGH,nouveau
+9,Energelec,Électricien,Cogolin,,sastb13006@gmail.com,Non,HIGH,nouveau
+10,Speedelec,Électricien,Cogolin,06 13 42 90 25,,Non,HIGH,nouveau
+11,Inter Connexion,Électricien,Cogolin,,,Non,HIGH,nouveau
+12,AJM Menuiserie,Menuisier,Cogolin,06 86 57 84 82,,Non,HIGH,nouveau
+13,Le Salon Cogolin,Coiffeur,Cogolin,06 50 36 17 21,,Non,HIGH,nouveau
+14,L.S Coiffure,Coiffeur,Cogolin,04 94 54 70 56,,Non,HIGH,nouveau
+15,Tendance coiffure,Coiffeur,Cogolin,,,Non,HIGH,nouveau
+16,Oxygene coiffure,Coiffeur,Cogolin,04 94 95 96 16,,Non,HIGH,nouveau
+17,Garage Faramia auto,Garage,Cogolin,06 50 81 17 77,,Non,HIGH,nouveau
+18,SAG,Coiffeur,Cogolin,,,Non,HIGH,nouveau
+19,Var Habitat Services,Plombier,Cogolin,,,Non,HIGH,nouveau
+20,Le Càcou,Restaurant,Cogolin,09 53 53 37 49,,Non,HIGH,nouveau
+21,Groove and Chill,Restaurant,Cogolin,04 94 82 31 63,,Non,HIGH,nouveau
+22,El Baraka,Restaurant,Cogolin,04 94 54 47 71,,Non,HIGH,nouveau
+23,Chez Anna,Restaurant,Cogolin,06 77 24 38 35,,Non,HIGH,nouveau
+24,Le petit cabanon,Restaurant,Cogolin,04 94 49 06 45,,Non,HIGH,nouveau
+25,Gueuleton Toulon,Restaurant,Toulon,04 94 09 44 45,toulon@gueuleton.fr,Oui,HIGH,nouveau
+26,Le France Toulon,Restaurant,Toulon,,,Non,HIGH,nouveau
+27,Le Lagon Toulon,Restaurant,Toulon,04 94 42 29 29,,Non,HIGH,nouveau
+28,Le Pastel,Restaurant,Toulon,04 94 64 73 95,,Non,HIGH,nouveau
+29,Le Saint Gabriel,Restaurant,Toulon,06 27 05 79 15,,Non,HIGH,nouveau
+30,Restaurant DINA,Restaurant,Toulon,04 23 14 97 50,restaurantpizzeriadina@gmail.com,Oui,HIGH,nouveau
+31,Studio Avenue Toulon,Coiffeur,Toulon,,,Non,HIGH,nouveau
+32,Salon de coiffure Liberté,Coiffeur,Toulon,,,Non,HIGH,nouveau
+33,Chouchou coiffure Toulon,Coiffeur,Toulon,,,Non,HIGH,nouveau
+34,Salon Giannini,Coiffeur,Toulon,,,Non,HIGH,nouveau
+35,Vadim coiffure,Coiffeur,Toulon,,,Non,HIGH,nouveau
+36,Infantino Coiffure,Coiffeur,Toulon,,,Non,HIGH,nouveau
+37,Sublime.R,Coiffeur,Toulon,,,Non,HIGH,nouveau
+38,Sam Figaro,Coiffeur,Toulon,,,Non,HIGH,nouveau
+39,A Votre Coiffure,Coiffeur,Toulon,,,Non,HIGH,nouveau
+40,Mon coiffeur by Franck H.,Coiffeur,Toulon,,,Non,HIGH,nouveau
+41,Le People restaurant,Restaurant,Hyères,04 94 57 45 07,lepeopleretaurant@gmail.com,Oui,HIGH,nouveau
+42,Giulia l Ristorante Italiano,Restaurant,Hyères,04 94 65 24 03,,Non,HIGH,nouveau
+43,Alaya Restaurant,Restaurant,Hyères,,,Oui,HIGH,nouveau
+44,Le Jardin Hyères,Restaurant,Hyères,04 94 35 24 12,,Non,HIGH,nouveau
+45,Le Méditerranée,Restaurant,Hyères,04 89 79 44 05,larabi1964@gmail.com,Non,HIGH,nouveau
+46,Pradeau Plage,Restaurant,Hyères,04 94 58 29 06,,Oui,HIGH,nouveau
+47,POISCAILLE,Restaurant,Hyères,,,Non,HIGH,nouveau
+48,Restaurant à l'Essentiel,Restaurant,Draguignan,04 83 73 46 49,lesfumieresdeprovence@gmail.com,Non,HIGH,nouveau
+49,mistral gourmand,Restaurant,Draguignan,04 89 53 27 21,,Non,HIGH,nouveau
+50,Les_TroisGarçons,Restaurant,Draguignan,04 94 47 78 55,,Oui,HIGH,nouveau
+51,Restaurant Au 13,Restaurant,Draguignan,04 98 09 98 50,,Oui,HIGH,nouveau
+52,Le Domino,Restaurant,Draguignan,04 94 52 53 42,,Oui,HIGH,nouveau
+53,Restaurant du Marché,Restaurant,Draguignan,06 27 34 23 88,,Non,HIGH,nouveau
+54,Le Bistrot Italien Brignoles,Restaurant,Brignoles,04 94 86 90 36,,Non,HIGH,nouveau
+55,L'Antr'acte,Restaurant,Brignoles,06 72 32 63 91,localoria.com@gmail.com,Non,HIGH,nouveau
+56,Le Jardin Restaurant Brignoles,Restaurant,Brignoles,04 94 77 00 75,,Non,HIGH,nouveau
+57,Salon de coiffure Le Sixième,Coiffeur,Brignoles,,,Non,HIGH,nouveau
+58,BH Coiffure,Coiffeur,Brignoles,,,Non,HIGH,nouveau
+59,L'artiste Coiffeur Barbier,Coiffeur,Sainte-Maxime,06 98 34 65 98,contact@coiffeurbarbiersaintmaxime.com,Non,HIGH,nouveau
+60,Beverley Coiffure,Coiffeur,Sainte-Maxime,04 94 96 77 20,,Non,HIGH,nouveau
